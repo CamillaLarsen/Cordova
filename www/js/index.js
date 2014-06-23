@@ -89,7 +89,8 @@ function gotPosition(position) {
         //create marker
         marker = new google.maps.Marker({
             position: point,
-            map: map
+            map: map,
+            background: logo.png
         });
     } else {
         //move marker to new position
