@@ -90,7 +90,7 @@ function gotPosition(position) {
         marker = new google.maps.Marker({
             position: point,
             map: map,
-            background: logo.png
+            icon: logo
         });
     } else {
         //move marker to new position
