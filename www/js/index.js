@@ -87,7 +87,7 @@ function gotPosition(position) {
     var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     if (!marker) {
         //create marker
-        var image = 'img/logo.png';
+        var image = 'img/cordova.png';
         marker = new google.maps.Marker({
             position: point,
             map: map,
