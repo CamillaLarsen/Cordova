@@ -22,8 +22,6 @@ var watchID;
 
 $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReady, false);
-    //uncomment for testing in Chrome browser
-//    onDeviceReady();
 });
 
 function onDeviceReady() {
@@ -67,34 +65,20 @@ function map() {
     });
 }
 
-// Method to open the About dialog
-function showAbout() {
-    showAlert("Google Maps", "Created with NetBeans 7.4");
-}
-;
-
-function showAlert(message, title) {
-    if (window.navigator.notification) {
-        window.navigator.notification.alert(message, null, title, 'OK');
-    } else {
-        alert(title ? (title + ": " + message) : message);
-    }
-}
-
 function gotPosition(position) {
     map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
 
     var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     if (!marker) {
-        //create marker
+        // Laver markør
         var image = 'img/cordova.png';
         marker = new google.maps.Marker({
             position: point,
             map: map,
             icon: image
         });
-    } else {
-        //move marker to new position
-        marker.setPosition(point);
-    }
+    } 
+//    else {
+//        marker.setPosition(point);
+//    }
 }
